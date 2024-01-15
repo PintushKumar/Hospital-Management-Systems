@@ -8,6 +8,7 @@ public class Patients {
      String emailId;
      String gender;
      String diseases;
+     boolean isAdmit;
      Doctor doctor;
      Room room;
 
@@ -47,7 +48,7 @@ public class Patients {
         return room;
     }
 
-    public Patients(String pID, String name, int age, long phoneNumber, String emailId, String gender, String diseases , Doctor doctor , Room room ) {
+    public Patients(String pID, String name, int age, long phoneNumber, String emailId, String gender, String diseases , Doctor doctor , Room room  , boolean isAdmit) {
         this.pID = pID;
         this.name = name;
         this.age = age;
@@ -57,5 +58,22 @@ public class Patients {
         this.diseases = diseases;
         this.doctor =doctor;
         this.room=room;
+        this.isAdmit=isAdmit;
+    }
+
+    @Override
+    public String toString() {
+        return "Patients {\n" +
+                "pID='" + pID + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", phoneNumber=" + phoneNumber +
+                ", emailId='" + emailId + '\'' +
+                ", gender='" + gender + '\'' +
+                ", diseases='" + diseases + '\'' +
+                ", isAdmit=" + isAdmit +
+                ", doctor=" + doctor +
+                ", room=" + room +"\n"+
+                '}';
     }
 }
